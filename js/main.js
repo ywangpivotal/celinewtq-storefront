@@ -269,7 +269,10 @@
     }
 
     toggle.addEventListener("click", function () {
-      setOpen(toggle.getAttribute("aria-expanded") !== "true");
+      var open = toggle.getAttribute("aria-expanded") !== "true";
+      setOpen(open);
+      // the open menu sits before the toggle in DOM order, so move focus into it
+      if (open) nav.querySelector("a").focus();
     });
     nav.addEventListener("click", function (event) {
       if (event.target.closest("a")) setOpen(false);
