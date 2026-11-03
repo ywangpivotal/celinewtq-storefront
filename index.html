@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CelineWTQ — Handmade Ceramic Dinnerware</title>
+  <meta name="description" content="Handmade ceramic plates, bowls, mugs and serving platters, thrown by hand in small batches.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&amp;family=Inter:wght@400;500;600&amp;display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#top" aria-label="CelineWTQ home">CelineWTQ</a>
+
+      <nav id="primary-nav" class="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#journal">Journal</a></li>
+        </ul>
+      </nav>
+
+      <button class="cart-link" type="button" id="cart-link" aria-label="Cart, 0 items">
+        <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+          <path d="M6 7h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+          <path d="M9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <span class="cart-badge" id="cart-count" aria-hidden="true">0</span>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" id="collections" aria-labelledby="hero-title">
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid slice" width="1200" height="600" focusable="false">
+          <defs>
+            <radialGradient id="hero-glow" cx="70%" cy="40%" r="70%">
+              <stop offset="0" stop-color="#EFE6D8"/>
+              <stop offset="1" stop-color="#E2D5C1"/>
+            </radialGradient>
+            <radialGradient id="plate-shade" cx="45%" cy="40%" r="60%">
+              <stop offset="0" stop-color="#FBF8F3"/>
+              <stop offset="1" stop-color="#E7DDCD"/>
+            </radialGradient>
+          </defs>
+          <rect width="1200" height="600" fill="url(#hero-glow)"/>
+          <circle cx="880" cy="330" r="230" fill="url(#plate-shade)"/>
+          <circle cx="880" cy="330" r="160" fill="none" stroke="#D8CAB4" stroke-width="3"/>
+          <ellipse cx="1040" cy="170" rx="95" ry="60" fill="#B98A62" opacity=".85"/>
+          <ellipse cx="1040" cy="160" rx="80" ry="40" fill="#A47450"/>
+          <circle cx="700" cy="520" r="90" fill="#8A9A86" opacity=".75"/>
+        </svg>
+      </div>
+      <div class="container hero-content">
+        <p class="eyebrow">Autumn Harvest 2026</p>
+        <h1 id="hero-title">Made by hand.<br>Meant for every day.</h1>
+        <p class="hero-sub">Stoneware thrown in small batches, glazed in warm earth tones, and fired to last a lifetime of Sunday dinners.</p>
+        <a class="btn btn-primary" href="#shop">Shop the Autumn Harvest Collection</a>
+      </div>
+    </section>
+
+    <section class="section products" id="shop" aria-labelledby="products-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="products-title">Featured pieces</h2>
+          <p>Each piece is unique — slight variations in glaze and form are the mark of the maker.</p>
+        </header>
+        <ul class="product-grid" id="product-grid">
+          <!-- Rendered from the PRODUCTS array in js/main.js -->
+        </ul>
+        <noscript><p>Please enable JavaScript to browse our products.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section story" id="story" aria-labelledby="story-title">
+      <div class="container">
+        <header class="section-head">
+          <h2 id="story-title">Our story &amp; craftsmanship</h2>
+        </header>
+
+        <article class="story-block">
+          <figure class="story-media">
+            <svg viewBox="0 0 600 450" width="600" height="450" role="img" aria-labelledby="story-img-1">
+              <title id="story-img-1">Hands shaping a wet clay bowl on a spinning potter's wheel</title>
+              <rect width="600" height="450" fill="#D9CBB6"/>
+              <ellipse cx="300" cy="360" rx="230" ry="40" fill="#BFAE95"/>
+              <path d="M190 330c0-80 40-130 110-130s110 50 110 130Z" fill="#A9784F"/>
+              <ellipse cx="300" cy="205" rx="80" ry="16" fill="#8E6240"/>
+              <path d="M120 250c40-10 70 10 90 50l-30 20c-20-30-40-40-70-40Z" fill="#E9D3BC"/>
+              <path d="M480 250c-40-10-70 10-90 50l30 20c20-30 40-40 70-40Z" fill="#E9D3BC"/>
+            </svg>
+          </figure>
+          <div class="story-text">
+            <h3>Thrown by hand in our Portland studio</h3>
+            <p>Every plate and bowl begins as a lump of locally sourced stoneware clay, centred and pulled on the wheel by Celine and a small team of potters. No moulds, no shortcuts.</p>
+          </div>
+        </article>
+
+        <article class="story-block story-block--reverse">
+          <figure class="story-media">
+            <svg viewBox="0 0 600 450" width="600" height="450" role="img" aria-labelledby="story-img-2">
+              <title id="story-img-2">Rows of glazed bowls in sage, oat and rust drying on wooden studio shelves</title>
+              <rect width="600" height="450" fill="#EDE4D6"/>
+              <rect x="40" y="170" width="520" height="14" rx="4" fill="#B79A78"/>
+              <rect x="40" y="350" width="520" height="14" rx="4" fill="#B79A78"/>
+              <path d="M80 170c0-45 25-70 60-70s60 25 60 70Z" fill="#8A9A86"/>
+              <path d="M240 170c0-45 25-70 60-70s60 25 60 70Z" fill="#D8C8AE"/>
+              <path d="M400 170c0-45 25-70 60-70s60 25 60 70Z" fill="#A9603E"/>
+              <path d="M80 350c0-45 25-70 60-70s60 25 60 70Z" fill="#D8C8AE"/>
+              <path d="M240 350c0-45 25-70 60-70s60 25 60 70Z" fill="#A9603E"/>
+              <path d="M400 350c0-45 25-70 60-70s60 25 60 70Z" fill="#8A9A86"/>
+            </svg>
+          </figure>
+          <div class="story-text">
+            <h3>Glazes mixed from scratch</h3>
+            <p>Our signature sage, oat and rust glazes are mixed in-house from natural minerals. They're food-safe, lead-free, and finished to feel soft under your fingertips.</p>
+          </div>
+        </article>
+
+        <article class="story-block">
+          <figure class="story-media">
+            <svg viewBox="0 0 600 450" width="600" height="450" role="img" aria-labelledby="story-img-3">
+              <title id="story-img-3">A set dinner table with stacked ceramic plates, a mug and a linen napkin</title>
+              <rect width="600" height="450" fill="#E4D9C8"/>
+              <circle cx="260" cy="240" r="150" fill="#F6F1E9"/>
+              <circle cx="260" cy="240" r="105" fill="none" stroke="#D5C6AF" stroke-width="3"/>
+              <circle cx="260" cy="240" r="70" fill="#8A9A86" opacity=".8"/>
+              <rect x="440" y="140" width="90" height="100" rx="14" fill="#A9784F"/>
+              <path d="M530 165h18a20 20 0 0 1 0 40h-18" fill="none" stroke="#A9784F" stroke-width="10"/>
+              <rect x="430" y="280" width="110" height="130" rx="6" fill="#F0E8DA"/>
+            </svg>
+          </figure>
+          <div class="story-text">
+            <h3>Made to be used, every single day</h3>
+            <p>High-fired to 1,240°C, our pieces are dishwasher, microwave and oven safe. We design for the everyday table, not the display cabinet.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="newsletter" id="journal" aria-labelledby="newsletter-title">
+      <div class="container newsletter-inner">
+        <div class="newsletter-copy">
+          <h2 id="newsletter-title">Take 10% off your first order</h2>
+          <p>Join our journal for studio notes, new glaze drops and early access to seasonal collections.</p>
+        </div>
+        <form class="newsletter-form" id="newsletter-form" novalidate>
+          <div class="field">
+            <label for="newsletter-email">Email address</label>
+            <div class="field-row">
+              <input type="email" id="newsletter-email" name="email" autocomplete="email" placeholder="you@example.com" aria-describedby="newsletter-error" required>
+              <button class="btn btn-primary" type="submit">Get 10% off</button>
+            </div>
+            <p class="field-error" id="newsletter-error" aria-live="polite"></p>
+          </div>
+          <p class="form-success" id="newsletter-success" role="status" tabindex="-1" hidden></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <section aria-labelledby="footer-shop">
+        <h2 id="footer-shop" class="footer-title">Shop</h2>
+        <ul>
+          <li><a href="#shop">Plates</a></li>
+          <li><a href="#shop">Bowls</a></li>
+          <li><a href="#shop">Mugs &amp; cups</a></li>
+          <li><a href="#shop">Serving platters</a></li>
+          <li><a href="#collections">Autumn Harvest</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="footer-care">
+        <h2 id="footer-care" class="footer-title">Customer care</h2>
+        <dl class="policy-list">
+          <dt>Shipping policy</dt>
+          <dd>Free shipping on orders over $75. Pieces are handmade to order and ship in 5–7 business days.</dd>
+          <dt>Returns</dt>
+          <dd>30-day returns on unused items.</dd>
+          <dt>Breakage guarantee</dt>
+          <dd>Arrived broken? Send us a photo and we'll replace it free.</dd>
+        </dl>
+      </section>
+      <section aria-labelledby="footer-about">
+        <h2 id="footer-about" class="footer-title">About</h2>
+        <ul>
+          <li><a href="#story">Our story</a></li>
+          <li><a href="#story">Craftsmanship</a></li>
+          <li><a href="#journal">Journal</a></li>
+          <li><a href="#story">Care guide</a></li>
+        </ul>
+      </section>
+      <section aria-labelledby="footer-contact">
+        <h2 id="footer-contact" class="footer-title">Contact</h2>
+        <address>
+          <a href="mailto:hello@celinewtq.com">hello@celinewtq.com</a><br>
+          Studio 4, 112 Alder St<br>Portland, OR
+        </address>
+        <ul class="social">
+          <li><a href="https://www.instagram.com/" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.pinterest.com/" rel="noopener">Pinterest</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="year">2026</span> CelineWTQ Ceramics. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite" aria-atomic="true"></div>
+</body>
+</html>
