@@ -153,7 +153,6 @@ a { color: inherit; text-underline-offset: .2em; }
   margin-right: auto;
 }
 .nav-toggle {
-  order: 3;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -197,14 +196,17 @@ a { color: inherit; text-underline-offset: .2em; }
 .primary-nav a:hover { text-decoration: underline; }
 
 .cart-link {
-  order: 2;
   position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 44px; height: 44px;
+  padding: 0;
+  background: none;
+  border: 0;
   color: var(--color-text);
   border-radius: 50%;
+  cursor: pointer;
 }
 .cart-link:hover { background: var(--color-sand); }
 .cart-badge {
@@ -330,6 +332,8 @@ a { color: inherit; text-underline-offset: .2em; }
 .field input:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 2px; border-color: var(--color-primary); }
 .field input[aria-invalid="true"] { border-color: var(--color-error); border-width: 2px; }
 .field-error { min-height: 1.5em; margin: .5rem 0 0 1rem; color: var(--color-error); font-size: .9rem; font-weight: 500; }
+.form-success:focus { outline: none; }
+.form-success:focus-visible { outline: 3px solid var(--color-focus); outline-offset: 3px; }
 .form-success {
   margin: 0;
   padding: 1rem 1.25rem;

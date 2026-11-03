@@ -18,11 +18,6 @@
     <div class="container header-inner">
       <a class="logo" href="#top" aria-label="CelineWTQ home">CelineWTQ</a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-        <span class="nav-toggle-bar" aria-hidden="true"></span>
-        <span class="visually-hidden">Menu</span>
-      </button>
-
       <nav id="primary-nav" class="primary-nav" aria-label="Primary">
         <ul>
           <li><a href="#shop">Shop</a></li>
@@ -32,13 +27,17 @@
         </ul>
       </nav>
 
-      <a class="cart-link" href="#cart" id="cart-link" aria-label="Cart, 0 items">
+      <button class="cart-link" type="button" id="cart-link" aria-label="Cart, 0 items">
         <svg class="icon" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
           <path d="M6 7h12l-1.2 11.2a2 2 0 0 1-2 1.8H9.2a2 2 0 0 1-2-1.8L6 7Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
           <path d="M9 9V6a3 3 0 0 1 6 0v3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
         </svg>
         <span class="cart-badge" id="cart-count" aria-hidden="true">0</span>
-      </a>
+      </button>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+        <span class="nav-toggle-bar" aria-hidden="true"></span>
+        <span class="visually-hidden">Menu</span>
+      </button>
     </div>
   </header>
 
@@ -166,7 +165,7 @@
             </div>
             <p class="field-error" id="newsletter-error" aria-live="polite"></p>
           </div>
-          <p class="form-success" id="newsletter-success" role="status" hidden></p>
+          <p class="form-success" id="newsletter-success" role="status" tabindex="-1" hidden></p>
         </form>
       </div>
     </section>

@@ -146,12 +146,18 @@
   /* ---------- Cart ---------- */
 
   function readCount() {
+    var raw;
     try {
-      var n = parseInt(window.localStorage.getItem(CART_KEY), 10);
-      return isNaN(n) || n < 0 ? 0 : n;
+      raw = window.localStorage.getItem(CART_KEY);
     } catch (e) {
-      return 0; // storage unavailable (privacy mode, file:// restrictions)
+      return 0; // storage unavailable (privacy mode, disabled, file:// restrictions)
     }
+    if (raw === null) return 0;
+    // Number() rejects partial strings like "12oops"; isSafeInteger rejects Infinity ("1e400"), fractions and NaN
+    var n = raw.trim() === "" ? NaN : Number(raw);
+    if (Number.isSafeInteger(n) && n >= 0) return n;
+    writeCount(0); // reset corrupt value
+    return 0;
   }
 
   function writeCount(n) {
@@ -240,6 +246,7 @@
       form.querySelector(".field").hidden = true;
       success.textContent = "Thank you! Your 10% off code WELCOME10 is on its way to " + value + ".";
       success.hidden = false;
+      success.focus(); // the focused submit button was just hidden
     });
 
     // clear the error as soon as the input becomes valid
@@ -285,8 +292,7 @@
       if (button) handleAddToCart(button);
     });
 
-    document.getElementById("cart-link").addEventListener("click", function (event) {
-      event.preventDefault();
+    document.getElementById("cart-link").addEventListener("click", function () {
       showToast(cartCount === 0 ? "Your cart is empty." : "You have " + cartCount + (cartCount === 1 ? " item" : " items") + " in your cart.");
     });
 
